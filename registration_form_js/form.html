@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration From</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function data() {   
+            var lettersOnly = /^[a-zA-Z]+$/;
+    
+            var F_Name = document.getElementById("first_name").value;
+            var L_Name = document.getElementById("last_name").value;
+            var Eml = document.getElementById("email").value;
+            var Pass = document.getElementById("password").value;
+            var Con_pass = document.getElementById("confirm_pass").value;
+    
+            if (F_Name==""||L_Name==""||Eml==""||Pass==""||Con_pass=="") {
+                alert("All Fields Are Mendatory");
+                return false;
+    
+            }
+            else if (!lettersOnly.test(F_Name)) {
+                alert("Only letters allowed! No numbers or special characters.");
+                return false;
+            }
+            else if (!lettersOnly.test(L_Name)) {
+                alert("Only letters allowed! No numbers or special characters.");
+                return false;
+            }
+            else if(Pass.length < 8) {
+                alert("Password must be at least 8 characters long")
+                return false;
+            }
+            else if(Pass !== Con_pass) {
+                alert("Password and Confirm Password do not match.")
+                return false;
+            }
+            else
+            {
+                true;
+            }
+        }
+        </script>
+          
+</head>
+<body>
+    <form onsubmit="return data()" action="submit_page.html" id="form_id">
+       <div class="form_heading">
+        <img src="img/logo.png" alt="">
+        <h4 class="form_heading">Registration Form</h4>
+       </div>
+        <label class="form_font">First Name:</label> <br>
+        <input type="text" name="" id="first_name" placeholder="Enter Your First Name" class="input_form"> <br>
+
+        <label class="form_font">Last Name :</label> <br>
+        <input type="text" name="" id="last_name" placeholder="Enter Your least Name" class="input_form"> <br>
+
+        <label class="form_font">Email :</label> <br>
+        <input type="email" name="" id="email" placeholder="Enter Your Email"class="input_form" required> <br>
+
+        <label class="form_font">Password :</label><br>
+        <input type="password" name="" id="password" class="input_form" placeholder="Enter Your Password"><br>
+
+        <label class="form_font">Confirm Password :</label><br>
+        <input type="password" name="" id="confirm_pass" class="input_form" placeholder="Enter Your Confirm Password"><br> <br>
+
+        <input class="btn" type="submit" value="Submit Your Data"> <br>
+    </form>
+</body>
+</html>
