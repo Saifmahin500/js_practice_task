@@ -7,16 +7,17 @@ body{
     justify-content: center;
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url(img/clipboard-with-ribbons-candles_23-2147628613.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(./img/bg_image.jpg); */
+    background-color: #9633FF;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     
 
 }
 .form_heading{
-    font-size: 24px;
-    text-decoration: underline;
+    font-size: 28px;
+    /* text-decoration: underline; */
     text-align: center;
     margin-top: 10px;
 }
@@ -28,8 +29,9 @@ body{
     padding: 10px 20px ;
     margin: 20px 0px;
     border: 2px solid black;
-    border-radius: 4px;
-    background-color: rgb(76, 180, 212);
+    border-radius: 15px;
+    /* background-color: rgb(76, 180, 212); */
+    background-color: whitesmoke;
     box-shadow: 20px 20px 15px rgba(0,0,0,0.2);
 }
 .form_font{
@@ -40,12 +42,17 @@ body{
     width: 300px;
     height: 25px;
     margin: 5px 0;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+.input_form::placeholder{
+    padding: 5px;
 }
 .btn{
     font-size: 14px;
     padding: 10px;
-    background-color: #E1D9C2;
+    border-radius: 15px;
+    background-color: #9633FF;
+    color: white;
     font-weight: bold;
     margin-left: 68px;
     margin-bottom: 10px;
